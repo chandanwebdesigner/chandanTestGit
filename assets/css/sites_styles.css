@@ -115,10 +115,20 @@ ul.top-header li a:hover{
 
 }
 /* ===========================TOP HEADER CSS END=========================== */
+.h-fix{
+  position: absolute;
+    z-index: 1051;
+    top: 37px;
+}
+/* .website{
+  position: relative;
+    top: 60px;
+} */
 .header-inner-bg{
   position: relative;
   overflow: hidden;
-  padding-bottom: 80px;
+  margin-left: -12px;
+  margin-right: -12px;
 }
 .header-inner-bg::before{
   position: absolute;
@@ -143,6 +153,7 @@ ul.top-header li a:hover{
   position: relative;
   overflow: hidden;
   padding-bottom: 80px;
+   z-index:0;
 }
 .scroll-header-inner-bg::before{
   position: fixed;
@@ -165,8 +176,8 @@ ul.top-header li a:hover{
 }
 
 .h-fixed{
-  position: fixed;
-  top: 0px;
+  position: fixed !important;
+  top: 0px !important;
 }
 .dropdown-menu[data-bs-popper] {
   margin-top: 10px;
@@ -553,7 +564,9 @@ ul.top-header li a svg.spinner-grow {
 .site-fluid {
   display: flex;
   flex-wrap: nowrap;
-  margin-top: -80px;
+  position: relative;
+    top: 60px;
+    z-index: -1;
 }
 .sidebars {
   width: 75px;
@@ -570,7 +583,7 @@ ul.top-header li a svg.spinner-grow {
   transition: margin-left .3s ease-in-out,width .3s ease-in-out;
   padding-left: 75px;
   min-height: calc(100vh - 156px);
-  z-index: 1;
+  /* z-index: 1; */
 }
 .sidebars-hover {
   width: 280px;
