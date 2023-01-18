@@ -262,6 +262,10 @@ ul.top-header li a:hover{
 ul.top-header li a svg.spinner-grow {
   padding-right: 0px;
 }
+.top-warper ul li a i, .top-warper ul li a svg{
+  float: none;
+  padding-left: 8px;
+}
 }
 @media (max-width:991px){
   .top-warper .dropdown-menu {
