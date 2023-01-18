@@ -17,7 +17,9 @@
 <body class="body-bg bg-light top-warper">
     <!-- body-bg bg-light top-warper -->
     <!-- JAI MAA  -->
-    
+    <!-- <div class="header-inner-bg">
+      <img class="header-pic" src="assets/images/header-bg.jpg">
+    </div> -->
     <div class="container-fluid">
         <div class="row">
           
@@ -112,7 +114,7 @@
             <!-- lOGO HEADER START -->
             <div class="col-sm-12 p-0 top-header-gradient shadow h-fix">
               <nav class="navbar navbar-expand-lg shadow py-0">
-                <div class="website">
+                <div class="website container-fluid">
                   <a class="navbar-brand" href="#">
                     <img src="assets/images/site_logo.png" class="logo-img-h">
                   </a>
@@ -242,28 +244,6 @@
             <!-- CONTENT WARPER START  -->
             <div class="content-warper" style="height:2500px;">
               <div class="website">
-                <div class="header-inner-bg">
-                  
-                  <img class="header-pic" src="assets/images/header-bg.jpg">
-                  <div>
-                    <h1 class="label text-white">chandan</h1>
-                    <h2 class="label-theme">chandan</h2>
-                  </div>
-                </div>
-                <h1 class="label text-white">chandan</h1>
-                <h2 class="label-theme">chandan</h2>
-                <h3>chandan</h3>
-                <h4>chandan</h4>
-                <h5>chandan</h5>
-                <p>chandan</p>
-                <small>Chandan</small>
-                <h1 class="label text-white">chandan</h1>
-                <h2 class="label-theme">chandan</h2>
-                <h3>chandan</h3>
-                <h4>chandan</h4>
-                <h5>chandan</h5>
-                <p>chandan</p>
-                <small>Chandan</small>
                 <h1 class="label text-white">chandan</h1>
                 <h2 class="label-theme">chandan</h2>
                 <h3>chandan</h3>
@@ -272,9 +252,9 @@
                 <p>chandan</p>
                 <small>Chandan</small>
               </div>
-            </div>
+            
           </div>
-        
+        </div>
         <!-- FOOTER START  -->
         <footer class="main-footer px-3">
           <strong>Copyright &copy; 2022-2023 <a href="#">Microware</a>.</strong>
@@ -322,14 +302,14 @@
                     $('.s-fix').addClass('s-fixed')
                     $('.on-scroll').addClass('on-scroll-show')
                     $('.logo-img-h').addClass('logo-img-h-sc')
-                    // $('.header-inner-bg').attr('class', 'scroll-header-inner-bg')
+                    $('.header-inner-bg').attr('class', 'scroll-header-inner-bg')
                 }
                 else{
                     $('.h-fix').removeClass('h-fixed')
                     $('.s-fix').removeClass('s-fixed')
                     $('.on-scroll').removeClass('on-scroll-show')
                     $('.logo-img-h').removeClass('logo-img-h-sc')
-                    // $('.scroll-header-inner-bg').attr('class', 'header-inner-bg')
+                    $('.scroll-header-inner-bg').attr('class', 'header-inner-bg')
 
                 }
             })
@@ -347,80 +327,83 @@
             });
             // ===================== TOP & SIDE START ======================================== 
             
-                 $('body').addClass(localStorage.top);
-                 $('.fullcent-wraper').addClass(localStorage.fullcent);
+                 $('body').addClass(sessionStorage.top);
+                 $('.fullcent-wraper').addClass(sessionStorage.fullcent);
                 $('#top_menu').click(function(){
-                    localStorage.sbc = 'body-bg bg-light top-warper';
-                if(localStorage.top != 'top-warper'){
+                    sessionStorage.sbc = 'body-bg bg-light top-warper';
+                if(sessionStorage.top != 'top-warper'){
                     if($('body').hasClass('side-warper')){
                     $('body').removeClass('side-warper')
                     $('body').addClass('top-warper', true)
-                    localStorage.top = 'top-warper';
-                    localStorage.side = '';                  
+                    sessionStorage.top = 'top-warper';
+                    sessionStorage.side = '';                  
                     }else{
                     $('body').removeClass('top-warper', false)
-                    localStorage.top = '';
+                    sessionStorage.top = '';
                 }
             }
           
               $('.fullcent-wraper').addClass('fullcent-wraper-show', true)
-              localStorage.fullcent = 'fullcent-wraper-show'
+              sessionStorage.fullcent = 'fullcent-wraper-show'
               // $('.container-btn').show();
               // $('.container-fluid-btn').show();
            });                
-            $('body').addClass(localStorage.side);
-            $('body').attr('class',localStorage.sbc)
-            $('.website').addClass(localStorage.fullsites);
+            $('body').addClass(sessionStorage.side);
+            $('body').attr('class',sessionStorage.sbc)
+            $('.website').addClass(sessionStorage.fullsites);
             $('#side_menu').click(function(){
-                if(localStorage.side != 'side-warper'){
+                if(sessionStorage.side != 'side-warper'){
                     if($('body').hasClass('top-warper')){
                     $('body').removeClass('top-warper')
                     $('body').addClass('side-warper', true)
-                    localStorage.side = 'side-warper';
-                    localStorage.sbc = 'body-bg bg-light side-warper';
-                    localStorage.top = '';
+                    sessionStorage.side = 'side-warper';
+                    sessionStorage.sbc = 'body-bg bg-light side-warper';
+                    sessionStorage.top = '';
                 }
                 else{
                     $('body').removeClass('side-warper', false);
-                    localStorage.side = '' ;
+                    sessionStorage.side = '' ;
                 }
                 }
                 $('.fullcent-wraper').removeClass('fullcent-wraper-show', false)
-              localStorage.fullcent = ''
+              sessionStorage.fullcent = ''
               // $('.container-btn').hide();
               // $('.container-fluid-btn').hide();
             
             $('.website').removeClass('container', true);
             $('.website').addClass('container-fluid', true);
-            localStorage.fullsites = 'container-fluid'
-            localStorage.centersites = ''
+            sessionStorage.fullsites = 'container-fluid'
+            sessionStorage.centersites = ''
             });
            // ===================== TOP & SIDE END ======================================== 
            
-           $('.sidebars').toggleClass(localStorage.slg)
-            $('.content-warper').toggleClass(localStorage.cwlg)
-            $('.main-footer').toggleClass(localStorage.foot)
+           $('.sidebars').addClass(sessionStorage.slg)
+            $('.content-warper').addClass(sessionStorage.cwlg)
+            $('.main-footer').addClass(sessionStorage.foot)
             $('#side-collapse').click(function(){
-                if(localStorage.slg != 'sidebars-lg'){
-                    $('.sidebars').toggleClass('sidebars-lg', true)
-                    localStorage.slg = 'sidebars-lg'
+                if(sessionStorage.slg != 'sidebars-lg'){
+                  $('.sidebars').removeClass('sidebars-lg', true)
+                    $('.sidebars').addClass('sidebars-lg', true)
+                    sessionStorage.slg = 'sidebars-lg'
                 }else{
-                    $('.sidebars').toggleClass('sidebars-lg', false)
-                    localStorage.slg = ''
+                    $('.sidebars').removeClass('sidebars-lg', false)
+                    sessionStorage.slg = ''
                 }
-                if(localStorage.cwlg != 'content-warper-lg'){
-                    $('.content-warper').toggleClass('content-warper-lg', true)
-                    localStorage.cwlg = 'content-warper-lg'
+                if(sessionStorage.cwlg != 'content-warper-lg'){
+                  $('.content-warper').removeClass('content-warper-lg', true)
+                    $('.content-warper').addClass('content-warper-lg', true)
+                    sessionStorage.cwlg = 'content-warper-lg'
                 }else{
-                    $('.content-warper').toggleClass('content-warper-lg', false)
-                    localStorage.cwlg = ''
+                    $('.content-warper').removeClass('content-warper-lg', false)
+                    sessionStorage.cwlg = ''
                 }
-                if(localStorage.foot != 'main-footer-lg'){
-                    $('.main-footer').toggleClass('main-footer-lg', true)
-                    localStorage.foot = 'main-footer-lg'
+                if(sessionStorage.foot != 'main-footer-lg'){
+                  $('.main-footer').removeClass('main-footer-lg', true)
+                    $('.main-footer').addClass('main-footer-lg', true)
+                    sessionStorage.foot = 'main-footer-lg'
                 }else{
-                    $('.main-footer').toggleClass('main-footer-lg', false)
-                    localStorage.foot = ''
+                    $('.main-footer').addClass('main-footer-lg', false)
+                    sessionStorage.foot = ''
                 }
                 $('.side-nav-togg').toggleClass('arrows-left')
                 $('.sidebars').addClass('sidebars-hover');
@@ -450,12 +433,12 @@
 
 <script type="text/javascript">
   $(document).ready(function(){
-    $('.website').addClass(localStorage.centersites);
+    $('.website').addClass(sessionStorage.centersites);
     $('.container-btn').click(function(){
-      localStorage.fullsites = ''
+      sessionStorage.fullsites = ''
       $('.website').removeClass('container-fluid', true);
       $('.website').addClass('container', true);
-      localStorage.centersites = 'container'
+      sessionStorage.centersites = 'container'
     });
     
     $('.container-fluid-btn').click(function(){
@@ -463,8 +446,8 @@
         $('.website').removeClass('container');
         $('.website').removeClass('container-fluid');
         $('.website').addClass('container-fluid', true)
-        localStorage.fullsites = 'container-fluid'
-        localStorage.centersites = ''
+        sessionStorage.fullsites = 'container-fluid'
+        sessionStorage.centersites = ''
       }
     })
   })
@@ -478,7 +461,7 @@
       function initChangeStyleSheet() {
           var folder_path = 'assets/css/theme-color/';
           var selector = 'head link[href$="color.css"]';
-          var color = localStorage.getItem('ajwebskin');
+          var color = sessionStorage.getItem('ajwebskin');
 
 
           if (color == null) {
@@ -489,28 +472,28 @@
           }
           $('.default-color').click(function () {
               $(selector).attr('href', folder_path + 'color.css');
-              localStorage.setItem('ajwebskin', 'color.css');
+              sessionStorage.setItem('ajwebskin', 'color.css');
           });
           $('.red-color').click(function () {
               $(selector).attr('href', folder_path + 'red-color.css');
-              localStorage.setItem('ajwebskin', 'red-color.css');
+              sessionStorage.setItem('ajwebskin', 'red-color.css');
           });
           $('.pink-color').click(function(){
               $(selector).attr('href', folder_path + 'pink-color.css');
-              localStorage.setItem('ajwebskin', 'pink-color.css')
+              sessionStorage.setItem('ajwebskin', 'pink-color.css')
           })
           $('.orange-color').click(function () {
               $(selector).attr('href', folder_path + 'orange-color.css');
-              localStorage.setItem('ajwebskin', 'orange-color.css');
+              sessionStorage.setItem('ajwebskin', 'orange-color.css');
           });
           $('.bluegreen-color').click(function () {
               $(selector).attr('href', folder_path + 'bluegreen-color.css');
-              localStorage.setItem('ajwebskin', 'bluegreen-color.css');
+              sessionStorage.setItem('ajwebskin', 'bluegreen-color.css');
 
           });
           $('.navyblue-color').click(function () {
               $(selector).attr('href', folder_path + 'navyblue-color.css');
-              localStorage.setItem('ajwebskin', 'navyblue-color.css');
+              sessionStorage.setItem('ajwebskin', 'navyblue-color.css');
           });
 
       }
