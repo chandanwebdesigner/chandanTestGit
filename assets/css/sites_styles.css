@@ -271,6 +271,10 @@ ul.top-header li a svg.spinner-grow {
   .top-warper .dropdown-menu {
     width: 100%;
 }
+.top-warper ul li a i, .top-warper ul li a svg{
+  float: none;
+  padding-left: 8px;
+}
 .top-warper .dropend .dropdown-menu[data-bs-popper] {
   top: auto !important;
   right: auto !important;
