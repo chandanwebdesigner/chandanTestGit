@@ -263,7 +263,7 @@ ul.top-header li a svg.spinner-grow {
   padding-right: 0px;
 }
 .top-warper ul li a i, .top-warper ul li a svg{
-  float: none;
+  float: none !important;
   padding-left: 8px;
 }
 }
@@ -272,7 +272,7 @@ ul.top-header li a svg.spinner-grow {
     width: 100%;
 }
 .top-warper ul li a i, .top-warper ul li a svg{
-  float: none;
+  float: none !important;
   padding-left: 8px;
 }
 .top-warper .dropend .dropdown-menu[data-bs-popper] {
