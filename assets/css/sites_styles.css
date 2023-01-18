@@ -548,7 +548,7 @@ ul.top-header li a svg.spinner-grow {
     padding-right: 0.3rem;
     margin-top: 0.5rem;
 }
-.navbar-nav .dropdown-menu {
+.side-warper .navbar-nav .dropdown-menu {
   position: absolute;
 }
 }
